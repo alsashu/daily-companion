@@ -1,0 +1,14 @@
+# Local development override: publishes PostgreSQL on 127.0.0.1 so a backend
+# running on the host (npm run dev) and the integration tests can reach it.
+#   docker compose -f docker-compose.yml -f docker-compose.dev.yml up -d postgres
+# Never use this file in production.
+
+services:
+  postgres:
+    ports:
+      - "127.0.0.1:${POSTGRES_PORT:-5432}:5432"
+    networks:
+      - dev-net
+
+networks:
+  dev-net:

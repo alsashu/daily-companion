@@ -1,0 +1,19 @@
+node_modules/
+dist/
+coverage/
+*.log
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+
+# Database backups
+backups/
+*.sql.gz
+*.dump
+
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

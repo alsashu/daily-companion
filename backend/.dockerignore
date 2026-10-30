@@ -1,0 +1,10 @@
+node_modules
+dist
+coverage
+tests
+.env
+.env.*
+*.log
+Dockerfile
+.dockerignore
+eslint.config.mjs

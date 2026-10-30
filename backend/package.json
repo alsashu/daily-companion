@@ -1,0 +1,38 @@
+{
+  "name": "daily-companion-backend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "REST API for the Daily Companion planner",
+  "main": "dist/server.js",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "build": "tsc -p tsconfig.build.json",
+    "start": "node dist/server.js",
+    "db:init": "tsx src/database/init.ts",
+    "test": "vitest run tests/unit",
+    "test:integration": "vitest run tests/integration",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "pg": "^8.13.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.17.0",
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.10.2",
+    "@types/pg": "^8.11.10",
+    "@types/supertest": "^6.0.2",
+    "eslint": "^9.17.0",
+    "globals": "^15.14.0",
+    "supertest": "^7.0.0",
+    "tsx": "^4.19.2",
+    "typescript": "~5.7.2",
+    "typescript-eslint": "^8.18.1",
+    "vitest": "^2.1.8"
+  }
+}
